@@ -103,7 +103,19 @@ predictButton.addEventListener("click", async function () {
         );
 
 
-        const data = await response.json();
+        const text = await response.text();
+
+let data;
+
+try {
+    data = JSON.parse(text);
+} catch (e) {
+    throw new Error(
+        "Server không trả về JSON.\n" +
+        "HTTP Status: " + response.status + "\n" +
+        "Response: " + (text || "(rỗng)")
+    );
+}
 
 
         // Kiểm tra lỗi
