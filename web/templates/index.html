@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cat & Dog AI Classifier</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <div class="logo">🐱🐶</div>
+
+            <h1>Cat & Dog AI</h1>
+
+            <p>
+                Nhận diện chó và mèo bằng trí tuệ nhân tạo
+            </p>
+        </div>
+
+
+        <div class="card">
+
+            <div class="upload-area" id="uploadArea">
+
+                <div class="upload-icon">
+                    📷
+                </div>
+
+                <h2>
+                    Chọn một hình ảnh
+                </h2>
+
+                <p>
+                    Upload ảnh chó hoặc mèo để AI nhận diện
+                </p>
+
+                <input
+                    type="file"
+                    id="imageInput"
+                    accept="image/*"
+                    hidden
+                >
+
+                <button
+                    class="select-button"
+                    id="selectButton"
+                >
+                    Chọn ảnh
+                </button>
+
+            </div>
+
+
+            <div
+                class="preview-container"
+                id="previewContainer"
+                style="display: none;"
+            >
+
+                <img
+                    id="previewImage"
+                    src=""
+                    alt="Preview"
+                >
+
+                <button
+                    class="predict-button"
+                    id="predictButton"
+                >
+                    🤖 Nhận diện
+                </button>
+
+            </div>
+
+
+            <div
+                class="loading"
+                id="loading"
+                style="display: none;"
+            >
+
+                <div class="spinner"></div>
+
+                <p>
+                    AI đang phân tích ảnh...
+                </p>
+
+            </div>
+
+
+            <div
+                class="result"
+                id="result"
+                style="display: none;"
+            >
+
+                <div
+                    class="result-icon"
+                    id="resultIcon"
+                >
+                    🐱
+                </div>
+
+                <h2 id="resultLabel">
+                    CAT
+                </h2>
+
+                <p>
+                    Độ tin cậy:
+                </p>
+
+                <div class="confidence-bar">
+
+                    <div
+                        class="confidence-fill"
+                        id="confidenceFill"
+                    ></div>
+
+                </div>
+
+                <strong id="confidenceText">
+                    0%
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer">
+
+            <p>
+                Powered by TensorFlow & MobileNetV2
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <script src="/static/js/script.js"></script>
+
+</body>
+
+</html>

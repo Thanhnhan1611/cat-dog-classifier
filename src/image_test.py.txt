@@ -1,0 +1,9 @@
+from PIL import Image
+
+img = Image.open("../data/cat.jpg")
+
+print("Kích thước ban đầu:", img.size)
+
+img = img.resize((224, 224))
+
+print("Sau resize:", img.size)
