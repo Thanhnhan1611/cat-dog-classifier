@@ -14,7 +14,6 @@ data/val/
 data/test/
 
 # Trained models
-models/*.keras
 models/*.h5
 models/*.hdf5
 
